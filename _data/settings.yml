@@ -3,23 +3,21 @@ menu:
 - {name: 'publications', url: '/publications'}
 - {name: 'courses', url: '/courses'}
 - {name: 'cv', url: '/cv'}
+- {name: 'Blog', url: '/blog'}
 - {name: 'contact', url: '/contact'}
 
 people:
-- {name: 'Primary Investigator', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/primary-investigator.jpg', url: 'primary-investigator'}
-- {name: 'Lab Technician', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/lab-technician.jpg', url: 'lab-technician'}
-- {name: 'Graduate Student', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/graduate-student.jpg', url: 'graduate-student'}
+- {name: 'Maliha Aziz', title: 'Research Scientist', department: 'Antibiotic Resistance Action Center', institution: 'George Washington University', institution_address: 'Washington, DC', phone: '(480) 735-1085', email: 'aziz.maliha@gmail.com', office: '', image: 'assets/img/maliha-aziz.jpg', url: 'maliha-aziz'}
 
 courses:
-- {name: 'Vector Calculus', url: 'vector-calculus'}
-- {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
-- {name: 'Stellar Structures', url: 'stellar-structures'}
+- {name: 'Machine Learning I: Algorithm Analysis', url: 'machine-learning-i'}
+- {name: 'Machine Learning II: Data Analysis', url: 'machine-learning-ii'}
+- {name: 'Bioinformatics', url: 'bioinformatics'}
+- {name: 'Computational Biology', url: 'computational-biology'}
 
 social:
-- {icon: 'github', link: 'https://github.com/LeNPaul'}
-- {icon: 'twitter', link: 'https://twitter.com/paululele'}
-- {icon: 'instagram', link: 'https://instagram.com/paululele'}
-- {icon: 'linkedin', link: 'https://linkedin.com/in/lenpaul'}
+- {icon: 'github', link: 'https://github.com/malihaaziz'}
+- {icon: 'linkedin', link: 'https://linkedin.com/in/malihaaziz'}
 
 contacts:
-- {name: 'Dr. Academia', title: 'Professor', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/contact.jpg'}
+- {name: 'Maliha Aziz', title: 'Research Scientist', department: 'Antibiotic Resistance Action Center', institution: 'George Washington University', institution_address: 'Washington, DC', phone: '(480) 735-1085', email: 'aziz.maliha@gmail.com', office: '', image: 'assets/img/maliha-aziz.jpg'}
