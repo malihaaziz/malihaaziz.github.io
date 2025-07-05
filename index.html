@@ -22,7 +22,9 @@
         }
 
         header {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 3rem;
         }
 
@@ -299,6 +301,9 @@
             color: #888;
             font-size: 0.9rem;
         }
+        .header-content {
+              text-align: left;
+        }
 
         @media (max-width: 600px) {
             body {
@@ -308,12 +313,10 @@
             header {
                 flex-direction: column;
                 text-align: center;
-                gap: 2rem;
-            }
-
+              }
             .header-content {
-                text-align: center;
-            }
+            text-align: center;
+              }
 
             .profile-photo {
                 width: 150px;
