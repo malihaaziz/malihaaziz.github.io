@@ -82,9 +82,9 @@
 
         .contact-links {
             display: flex;
-            justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
+            margin-top: 1rem;
         }
 
         .contact-links a {
@@ -294,11 +294,27 @@
                 padding: 1rem;
             }
 
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .header-content {
+                text-align: center;
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+            }
+
             h1 {
                 font-size: 2rem;
             }
 
             .contact-links {
+                justify-content: center;
                 flex-direction: column;
                 gap: 0.8rem;
             }
@@ -316,15 +332,17 @@
 </head>
 <body>
     <header>
-        <div class="profile-photo">MA</div>
-        <h1>Maliha Aziz</h1>
-        <p class="subtitle">Computational Biologist & AI/ML Researcher</p>
-        <div class="contact-links">
-            <a href="mailto:aziz.maliha@gmail.com">aziz.maliha@gmail.com</a>
-            <a href="tel:4807351085">(480) 735-1085</a>
-            <a href="https://scholar.google.com/citations?hl=en&user=hzeHIYAAAAAJ" target="_blank">Google Scholar</a>
-            <a href="https://github.com/malihaaziz" target="_blank">GitHub</a>
+        <div class="header-content">
+            <h1>Maliha Aziz</h1>
+            <p class="subtitle">Computational Biologist & AI/ML Researcher</p>
+            <div class="contact-links">
+                <a href="mailto:aziz.maliha@gmail.com">aziz.maliha@gmail.com</a>
+                <a href="tel:4807351085">(480) 735-1085</a>
+                <a href="https://scholar.google.com/citations?hl=en&user=hzeHIYAAAAAJ" target="_blank">Google Scholar</a>
+                <a href="https://github.com/malihaaziz" target="_blank">GitHub</a>
+            </div>
         </div>
+        <div class="profile-photo">MA</div>
     </header>
 
     <nav>
