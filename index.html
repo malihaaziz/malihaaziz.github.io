@@ -323,10 +323,13 @@
                 font-size: 2rem;
             }
 
-            .contact-links {
-                justify-content: center;
-                flex-direction: column;
-                gap: 0.8rem;
+          .contact-links {
+              display: flex;
+              justify-content: center;   /* <-- add this */
+              gap: 1.5rem;
+              flex-wrap: wrap;
+              margin-top: 1rem;
+              /* align-items: center;  you can keep or remove this */
             }
 
             .nav-links {
@@ -341,27 +344,26 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-              <div class="header-content">
-                <h1>Maliha Aziz</h1>
-                <p class="subtitle">Computational Biologist & AI/ML Researcher</p>
+   <header>
+  <div class="header-content">
+    <h1>Maliha Aziz</h1>
+    <p class="subtitle">Computational Biologist & AI/ML Researcher</p>
 
-                <!-- Centered email -->
-                <p class="center-email">
-                <a href="mailto:aziz.maliha@gmail.com">aziz.maliha@gmail.com</a>
-                </p>
+    <!-- Centered email -->
+    <p class="center-email">
+      <a href="mailto:aziz.maliha@gmail.com">aziz.maliha@gmail.com</a>
+    </p>
 
-                <!-- All other contacts remain in your flex row -->
-                <div class="contact-links">
-                  <a href="https://scholar.google.com/citations?hl=en&user=hzeHIYAAAAAJ" target="_blank">Google Scholar</a>
-                  <a href="https://github.com/malihaaziz" target="_blank">GitHub</a>
-                  <a href="cv.pdf" target="_blank">CV</a>
-                </div>
-              </div>
-        </div>
-        <div class="profile-photo"></div>
-    </header>
+    <!-- All other contacts in one flex row -->
+    <div class="contact-links">
+      <a href="https://scholar.google.com/citations?hl=en&user=hzeHIYAAAAAJ" target="_blank">Google Scholar</a>
+      <a href="https://github.com/malihaaziz" target="_blank">GitHub</a>
+      <a href="cv.pdf" target="_blank">CV</a>
+    </div>
+  </div>
+
+  <div class="profile-photo"></div>
+</header>
 
     <nav>
         <div class="nav-links">
