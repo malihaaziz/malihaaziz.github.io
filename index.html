@@ -29,10 +29,35 @@
         }
 
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 3rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 3rem;
+        }
+        
+        .header-content {
+          text-align: left;
+        }
+        
+        .contact-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+          margin-top: 1rem;
+        }
+        
+        .contact-links a {
+          color: #0066cc;
+          text-decoration: none;
+          font-size: 0.95rem;
+          display: flex;
+          align-items: center;
+        }
+        
+        .contact-links a i {
+          margin-right: 0.4rem;
         }
 
         nav {
@@ -63,14 +88,7 @@
             color: #0066cc;
             border-bottom-color: #0066cc;
         }
-        .center-email {
-            text-align: center;
-            margin-bottom: 1rem; /* or whatever spacing you like */
-        }
-        .center-email a {
-              display: inline-block;  /* if you want to preserve padding, etc. */
-        }
-
+   
     .profile-photo {
             width: 150px;
             height: 150px;
@@ -97,24 +115,6 @@
             margin-bottom: 1rem;
         }
 
-        .contact-links {
-          display: flex;
-          justify-content: center;   /* ← add this here */
-          gap: 1.5rem;
-          flex-wrap: wrap;
-          margin-top: 1rem;
-  /* align-items: center; */  /* you can leave or remove this */
-            }
-
-        .contact-links a {
-            color: #0066cc;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        .contact-links a:hover {
-            text-decoration: underline;
-        }
 
         main {
             margin-top: 3rem;
@@ -307,9 +307,7 @@
             color: #888;
             font-size: 0.9rem;
         }
-       .header-content {
-          text-align: left;
-        }
+    
 
         @media (max-width: 600px) {
             body {
@@ -350,30 +348,37 @@
     <h1>Maliha Aziz</h1>
     <p class="subtitle">Computational Biologist & AI/ML Researcher</p>
 
-    <!-- Centered email -->
-    <p class="center-email">
-      <a href="mailto:aziz.maliha@gmail.com">aziz.maliha@gmail.com</a>
-    </p>
-
-    <!-- All other contacts in one flex row -->
     <div class="contact-links">
-     <div class="contact-links">
-  <a href="https://scholar.google.com/…"
-     target="_blank"
-     aria-label="Google Scholar">
-    <i class="fas fa-graduation-cap"></i>
-  </a>
-  <a href="https://github.com/malihaaziz"
-     target="_blank"
-     aria-label="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
-      <a href="cv.pdf" target="_blank">CV</a>
+      <!-- email -->
+      <a href="mailto:aziz.maliha@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+        <span>aziz.maliha@gmail.com</span>
+      </a>
+
+      <!-- Google Scholar -->
+      <a href="https://scholar.google.com/citations?hl=en&user=hzeHIYAAAAAJ"
+         target="_blank"
+         aria-label="Google Scholar">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/malihaaziz"
+         target="_blank"
+         aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <!-- CV -->
+      <a href="cv.pdf" target="_blank" aria-label="CV">
+        <i class="fas fa-file-alt"></i>
+      </a>
     </div>
   </div>
 
   <div class="profile-photo"></div>
 </header>
+
 
     <nav>
         <div class="nav-links">
