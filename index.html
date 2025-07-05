@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maliha Aziz</title>
+    <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-pII+Qe03xnQpR1Wk3ucgPrKcX6qs62wX3QvGp2C/2fcvdoiUr3jF2DFpEQO1bM5cCsmMwfsow9rYB+o8gvGiwg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+    />
     <style>
         * {
             margin: 0;
@@ -67,7 +74,6 @@
     .profile-photo {
             width: 150px;
             height: 150px;
-            border-radius: 50%;
             margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
@@ -301,8 +307,8 @@
             color: #888;
             font-size: 0.9rem;
         }
-        .header-content {
-              text-align: left;
+       .header-content {
+          text-align: left;
         }
 
         @media (max-width: 600px) {
@@ -310,12 +316,12 @@
                 padding: 1rem;
             }
 
-            header {
+             header {
                 flex-direction: column;
                 text-align: center;
               }
             .header-content {
-            text-align: center;
+                text-align: center;
               }
 
             .profile-photo {
@@ -351,8 +357,17 @@
 
     <!-- All other contacts in one flex row -->
     <div class="contact-links">
-      <a href="https://scholar.google.com/citations?hl=en&user=hzeHIYAAAAAJ" target="_blank">Google Scholar</a>
-      <a href="https://github.com/malihaaziz" target="_blank">GitHub</a>
+     <div class="contact-links">
+  <a href="https://scholar.google.com/…"
+     target="_blank"
+     aria-label="Google Scholar">
+    <i class="fas fa-graduation-cap"></i>
+  </a>
+  <a href="https://github.com/malihaaziz"
+     target="_blank"
+     aria-label="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
       <a href="cv.pdf" target="_blank">CV</a>
     </div>
   </div>
