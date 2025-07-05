@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maliha Aziz - Developer & Writer</title>
+    <title>Maliha Aziz</title>
     <style>
         * {
             margin: 0;
@@ -12,336 +12,220 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
+            background: #fff;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 2rem;
         }
 
-        /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-align: center;
+            margin: 2rem 0 3rem 0;
             padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #667eea;
-            text-decoration: none;
+            border-bottom: 1px solid #eee;
         }
 
         .nav-links {
             display: flex;
-            list-style: none;
+            justify-content: center;
             gap: 2rem;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
-            text-decoration: none;
             color: #333;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
         }
 
-        .nav-links a:hover {
-            color: #667eea;
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #667eea;
-            transition: width 0.3s ease;
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #666;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
         }
 
-        /* Main Content */
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
         main {
-            margin-top: 80px;
+            margin-top: 3rem;
         }
 
         .section {
-            padding: 4rem 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+            display: none;
         }
 
-        .hero {
-            text-align: center;
-            color: white;
+        .section.active {
+            display: block;
         }
 
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 5rem);
-            margin-bottom: 1rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        .section h2 {
+            margin-bottom: 1.5rem;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        /* About Section */
-        .about {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 2.5rem;
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
             margin-bottom: 1rem;
             color: #333;
         }
 
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 2rem;
+        }
+
+        .institution {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .role {
+            font-style: italic;
             color: #666;
+            margin: 0.2rem 0;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            color: #555;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.5rem;
         }
 
-        .skill-tag {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .profile-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 6rem;
-            color: white;
-            margin: 0 auto;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Blog Section */
-        .blog {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: white;
-        }
-
-        .blog h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .blog-post {
-            background: rgba(255, 255, 255, 0.95);
-            color: #333;
-            padding: 2rem;
+        .skill {
+            background: #f5f5f5;
+            padding: 0.3rem 0.8rem;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .blog-post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .blog-post h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #667eea;
-        }
-
-        .blog-post p {
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
             color: #666;
         }
 
-        .blog-date {
+        .publications {
+            margin-top: 2rem;
+        }
+
+        .publication {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .pub-title {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-authors {
             font-size: 0.9rem;
-            color: #999;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-journal {
+            font-size: 0.9rem;
+            color: #888;
             font-style: italic;
         }
 
-        /* Contact Section */
-        .contact {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+        .blog-posts {
+            margin-top: 2rem;
         }
 
-        .contact h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: #333;
-        }
-
-        .form-group input,
-        .form-group textarea {
+        .blog-post {
+            margin-bottom: 1.5rem;
             padding: 1rem;
-            border: 2px solid #e0e0e0;
+            background: #f9f9f9;
             border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: background 0.2s ease;
         }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        .blog-post:hover {
+            background: #f0f0f0;
         }
 
-        /* Footer */
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            backdrop-filter: blur(10px);
+        .blog-title {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            color: #333;
         }
 
-        /* Blog Modal */
+        .blog-excerpt {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .blog-date {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
         .blog-modal {
             display: none;
             position: fixed;
@@ -350,7 +234,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
+            z-index: 1000;
             overflow-y: auto;
         }
 
@@ -358,16 +242,17 @@
             background: white;
             margin: 50px auto;
             padding: 2rem;
-            border-radius: 15px;
-            max-width: 800px;
+            border-radius: 8px;
+            max-width: 700px;
             position: relative;
+            line-height: 1.7;
         }
 
         .close-modal {
             position: absolute;
-            top: 20px;
-            right: 25px;
-            font-size: 2rem;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
             cursor: pointer;
             color: #999;
         }
@@ -376,163 +261,239 @@
             color: #333;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        .blog-modal h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-modal h2 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+
+        .blog-modal ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-modal li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
             .nav-links {
-                display: none;
+                flex-direction: column;
+                gap: 1rem;
             }
 
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
+            .skills {
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="container">
-            <a href="#home" class="logo">Maliha Aziz</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="profile-photo">MA</div>
+        <h1>Maliha Aziz</h1>
+        <p class="subtitle">Computational Biologist & AI/ML Researcher</p>
+        <div class="contact-links">
+            <a href="mailto:aziz.maliha@gmail.com">aziz.maliha@gmail.com</a>
+            <a href="tel:4807351085">(480) 735-1085</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=hzeHIYAAAAAJ" target="_blank">Google Scholar</a>
+            <a href="https://github.com/malihaaziz" target="_blank">GitHub</a>
+        </div>
     </header>
 
+    <nav>
+        <div class="nav-links">
+            <a href="#about" class="nav-link active" onclick="showSection('about', this)">About</a>
+            <a href="#projects" class="nav-link" onclick="showSection('projects', this)">Projects</a>
+            <a href="#education" class="nav-link" onclick="showSection('education', this)">Education</a>
+            <a href="#publications" class="nav-link" onclick="showSection('publications', this)">Publications</a>
+            <a href="#blog" class="nav-link" onclick="showSection('blog', this)">Blog</a>
+        </div>
+    </nav>
+
     <main>
-        <section id="home" class="section hero">
-            <div class="container">
-                <h1>Hello, I'm Maliha</h1>
-                <p>Computational Biologist & AI/ML Researcher</p>
-                <a href="#about" class="cta-button">Learn More About Me</a>
+        <section id="about" class="section active">
+            <h2>About</h2>
+            <p>I'm a highly analytical and vision-driven computational biologist with over a decade of experience applying AI/ML and multi-omics approaches to biomarker discovery, host-pathogen interactions, and translational research. Currently pursuing my PhD in Health Data Science at George Washington University.</p>
+            <p>My work at the Antibiotic Resistance Action Center focuses on building infrastructure, algorithms, and collaborative teams that drive innovation at scale in antimicrobial resistance research.</p>
+            
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">Bioinformatics</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">Multi-Omics Analysis</span>
+                <span class="skill">LLMs (Ollama, DeepSeek)</span>
+                <span class="skill">DNA-LLM (DNABERT2)</span>
+                <span class="skill">Protein-LLM (ESM)</span>
+                <span class="skill">Python</span>
+                <span class="skill">R</span>
+                <span class="skill">HPC</span>
+                <span class="skill">Genomics</span>
+                <span class="skill">Microbiome Analysis</span>
+                <span class="skill">Predictive Analytics</span>
             </div>
         </section>
 
-        <section id="about" class="section about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>About Me</h2>
-                        <p>I'm a highly analytical and vision-driven computational biologist with over a decade of experience applying AI/ML and multi-omics approaches to biomarker discovery, host-pathogen interactions, and translational research. Currently pursuing my PhD in Health Data Science at George Washington University.</p>
-                        <p>At the Antibiotic Resistance Action Center, I build infrastructure, algorithms, and collaborative teams that drive innovation at scale. My work spans from developing diagnostic assays using machine learning to creating high-throughput genomic pipelines that have real-world clinical applications.</p>
-                        <p>I'm passionate about bridging the gap between computational methods and translational medicine, with a particular focus on infectious disease research and antimicrobial resistance.</p>
-                        <div class="skills">
-                            <span class="skill-tag">Bioinformatics</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Multi-Omics Analysis</span>
-                            <span class="skill-tag">LLMs (Ollama, DeepSeek)</span>
-                            <span class="skill-tag">DNA-LLM (DNABERT2)</span>
-                            <span class="skill-tag">Protein-LLM (ESM)</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">R</span>
-                            <span class="skill-tag">HPC</span>
-                            <span class="skill-tag">Genomics</span>
-                            <span class="skill-tag">Microbiome Analysis</span>
-                            <span class="skill-tag">Predictive Analytics</span>
-                        </div>
-                    </div>
-                    <div class="profile-image">
-                        MA
-                    </div>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="experience-item">
+                <div class="institution">Antibiotic Resistance Action Center, George Washington University</div>
+                <div class="role">Research Scientist</div>
+                <div class="date">November 2012 - Present | Washington, DC</div>
+                <div class="description">
+                    Lead technical development of high-throughput genomic pipelines, AI/ML approaches for biomarker discovery, and diagnostic assays. Developed qPCR assays for 15 probiotic species using unsupervised learning. Applied Bayesian methods for zoonotic E. coli source attribution using >8000 genomes.
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="institution">Translational Genomics Research Institute (TGen)</div>
+                <div class="role">Bioinformatics Analyst</div>
+                <div class="date">October 2008 - October 2012 | Flagstaff, AZ</div>
+                <div class="description">
+                    Developed NASP (Northern Arizona SNP Pipeline) for microbial genomics, now cited 251+ times. Created canonical-SNP detection pipeline and performed in-silico analysis for BactQuant assay development.
+                </div>
+            </div>
+            
+            <h2>Selected AI/ML Projects</h2>
+            <div class="experience-item">
+                <div class="institution">Probabilistic Host Attribution with Mobile Genetic Elements</div>
+                <div class="date">2023–2025</div>
+                <div class="description">
+                    Developed and validated a Bayesian latent class model integrating accessory genome features and sample similarity priors to infer zoonotic transmission routes of E. coli.
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="institution">Deep Learning for Fungal Diagnostic Imaging</div>
+                <div class="date">2025</div>
+                <div class="description">
+                    Designed a CNN-based image classification model for black Aspergillus spp. with augmentation strategies to overcome limited sample sizes. Integrated growth metadata to evaluate performance improvements.
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="institution">Protein Language Model Embeddings for Host Attribution</div>
+                <div class="date">2025</div>
+                <div class="description">
+                    Explored deep latent representations of protein sequences using ESM2 models. Applied DBSCAN and Leiden clustering with cosine and Hausdorff similarity analyses to identify host-associated patterns across E. coli isolates.
                 </div>
             </div>
         </section>
 
-        <section id="blog" class="section blog">
-            <div class="container">
-                <h2>Latest Blog Posts</h2>
-                <div class="blog-grid">
-                    <article class="blog-post" onclick="openBlogModal('blog1')">
-                        <h3>Protein Language Models for Host Attribution</h3>
-                        <p>Exploring how deep latent representations of protein sequences can complement traditional GWAS markers for E. coli host attribution...</p>
-                        <div class="blog-date">January 15, 2025</div>
-                    </article>
-                    <article class="blog-post" onclick="openBlogModal('blog2')">
-                        <h3>Bayesian Methods in Genomic Source Attribution</h3>
-                        <p>Developing probabilistic models that integrate accessory genome features for inferring zoonotic transmission routes...</p>
-                        <div class="blog-date">December 20, 2024</div>
-                    </article>
-                    <article class="blog-post" onclick="openBlogModal('blog3')">
-                        <h3>AI in Antimicrobial Resistance Research</h3>
-                        <p>How machine learning is revolutionizing our approach to understanding and combating antibiotic resistance...</p>
-                        <div class="blog-date">November 30, 2024</div>
-                    </article>
-                    <article class="blog-post" onclick="openBlogModal('blog4')">
-                        <h3>Building High-Throughput Genomic Pipelines</h3>
-                        <p>Lessons learned from developing scalable bioinformatics infrastructure for multi-omics data analysis...</p>
-                        <div class="blog-date">November 10, 2024</div>
-                    </article>
-                    <article class="blog-post" onclick="openBlogModal('blog5')">
-                        <h3>From OTU to ASV: Microbiome Analysis Evolution</h3>
-                        <p>The journey from OTU-based to ASV-based microbiome analysis using DADA2 and lessons for the field...</p>
-                        <div class="blog-date">October 25, 2024</div>
-                    </article>
-                    <article class="blog-post" onclick="openBlogModal('blog6')">
-                        <h3>Deep Learning for Fungal Diagnostic Imaging</h3>
-                        <p>Designing CNN-based classification models for black Aspergillus species identification in clinical settings...</p>
-                        <div class="blog-date">October 5, 2024</div>
-                    </article>
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="institution">George Washington University</div>
+                <div class="role">PhD in Health Data Science (In Progress)</div>
+            </div>
+            <div class="education-item">
+                <div class="institution">Arizona State University</div>
+                <div class="role">Master's in Computational Biosciences</div>
+            </div>
+            <div class="education-item">
+                <div class="institution">National University of Computer and Emerging Sciences (FAST)</div>
+                <div class="role">Bachelor of Computer Science</div>
+                <div class="date">Karachi, Pakistan</div>
+            </div>
+            
+            <h2>Awards & Fellowships</h2>
+            <div class="education-item">
+                <div class="institution">NSF Co-Design of Trustworthy AI Systems (DTAIS) Fellowship</div>
+                <div class="date">2024 - 2025 | Award Number: 2125677</div>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>Publications</h2>
+            <p><strong>h-index: 29</strong> | <a href="https://scholar.google.com/citations?hl=en&user=hzeHIYAAAAAJ" target="_blank">View all 76 publications</a></p>
+            <div class="publications">
+                <div class="publication">
+                    <div class="pub-title">Design and validation of Dolosigranulum pigrum specific PCR primers using the bacterial core genome</div>
+                    <div class="pub-authors">Aziz, M.*, Palmer, A.*, Iversen, S. et al.</div>
+                    <div class="pub-journal">Scientific Reports 13, 6110 (2023)</div>
+                </div>
+                <div class="publication">
+                    <div class="pub-title">Zoonotic Escherichia coli and Urinary Tract Infections in Southern California</div>
+                    <div class="pub-authors">Aziz M*, Park DE*, Vanessa et al.</div>
+                    <div class="pub-journal">mBio (Accepted)</div>
+                </div>
+                <div class="publication">
+                    <div class="pub-title">Pediatric urinary tract infections caused by poultry-associated Escherichia coli</div>
+                    <div class="pub-authors">Aziz M, Davis GS, Park DE, et al.</div>
+                    <div class="pub-journal">Microbiology Spectrum (2024)</div>
+                </div>
+                <div class="publication">
+                    <div class="pub-title">Gut microbiome predictors of Escherichia coli sequence type 131 colonization and loss</div>
+                    <div class="pub-authors">Park DE, Aziz M, Koch BJ, et al.</div>
+                    <div class="pub-journal">eBioMedicine (2024)</div>
+                </div>
+                <div class="publication">
+                    <div class="pub-title">Using source-associated mobile genetic elements to identify zoonotic extraintestinal E. coli infections</div>
+                    <div class="pub-authors">Liu C, Aziz M, Park D, Wu Z, et al.</div>
+                    <div class="pub-journal">One Health (2023)</div>
+                </div>
+            </div>
+            
+            <h2>Patents</h2>
+            <div class="publications">
+                <div class="publication">
+                    <div class="pub-title">Methods for detecting Dolosigranulum pigrum</div>
+                    <div class="pub-journal">U.S. Provisional Application No US 63/430,607</div>
+                </div>
+                <div class="publication">
+                    <div class="pub-title">Methods of pathogen biomarker detection</div>
+                    <div class="pub-journal">U.S. Provisional Application No. US 63/387,912</div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <div class="contact-icon">@</div>
-                            <span>aziz.maliha@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📱</div>
-                            <span>(480) 735-1085</span>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">G</div>
-                            <span>github.com/malihaaziz</span>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">🎓</div>
-                            <span>Google Scholar (h-index: 29)</span>
-                        </div>
-                    </div>
-                    <form class="contact-form" onsubmit="handleSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+        <section id="blog" class="section">
+            <h2>Blog</h2>
+            <div class="blog-posts">
+                <div class="blog-post" onclick="openBlogModal('blog1')">
+                    <div class="blog-title">Protein Language Models for Host Attribution</div>
+                    <div class="blog-excerpt">Exploring how ESM2 embeddings can improve E. coli source attribution through deep latent representations of protein sequences.</div>
+                    <div class="blog-date">January 15, 2025</div>
+                </div>
+                <div class="blog-post" onclick="openBlogModal('blog2')">
+                    <div class="blog-title">Bayesian Methods in Genomic Source Attribution</div>
+                    <div class="blog-excerpt">Developing probabilistic models that integrate accessory genome features for inferring zoonotic transmission routes.</div>
+                    <div class="blog-date">December 20, 2024</div>
+                </div>
+                <div class="blog-post" onclick="openBlogModal('blog3')">
+                    <div class="blog-title">AI in Antimicrobial Resistance Research</div>
+                    <div class="blog-excerpt">How machine learning is revolutionizing our approach to understanding and combating antibiotic resistance.</div>
+                    <div class="blog-date">November 30, 2024</div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Maliha Aziz. Built with ❤️ and deployed on GitHub Pages.</p>
-        </div>
+        <p>&copy; 2025 Maliha Aziz</p>
     </footer>
 
     <!-- Blog Modal -->
@@ -544,151 +505,106 @@
     </div>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        // Navigation functionality
+        function showSection(sectionId, linkElement) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
             });
-        });
+            
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked link
+            linkElement.classList.add('active');
+        }
 
         // Blog posts data
         const blogPosts = {
             blog1: {
-                title: "Getting Started with React Hooks",
-                date: "March 15, 2025",
+                title: "Protein Language Models for Host Attribution",
+                date: "January 15, 2025",
                 content: `
-                    <h1>Getting Started with React Hooks</h1>
-                    <p><em>Published on March 15, 2025</em></p>
+                    <h1>Protein Language Models for Host Attribution</h1>
+                    <p><em>Published on January 15, 2025</em></p>
                     
-                    <p>React Hooks revolutionized how we write React components by allowing us to use state and other React features in functional components. In this comprehensive guide, we'll explore the most commonly used hooks and how to implement them effectively.</p>
+                    <p>In my recent research, I've been exploring how deep latent representations of protein sequences can complement traditional genome-wide association study (GWAS) markers for host attribution of E. coli isolates. This work represents an exciting intersection of large language models and genomic epidemiology.</p>
                     
-                    <h2>What are React Hooks?</h2>
-                    <p>Hooks are functions that let you "hook into" React state and lifecycle features from functional components. They were introduced in React 16.8 and have become the preferred way to write React components.</p>
+                    <h2>The Challenge</h2>
+                    <p>Traditional methods for identifying the host source of bacterial isolates rely heavily on accessory genome elements and single nucleotide polymorphisms. While effective, these approaches may miss important patterns encoded in protein sequence similarities that could provide additional discriminatory power.</p>
                     
-                    <h2>useState Hook</h2>
-                    <p>The useState hook is the most fundamental hook for managing state in functional components:</p>
-                    <pre><code>import React, { useState } from 'react';
-
-function Counter() {
-    const [count, setCount] = useState(0);
-    
-    return (
-        <div>
-            <p>Count: {count}</p>
-            <button onClick={() => setCount(count + 1)}>
-                Increment
-            </button>
-        </div>
-    );
-}</code></pre>
+                    <h2>Our Approach</h2>
+                    <p>I extracted per-gene protein sequences from E. coli pangenomes and generated embeddings using ESM2 (Evolutionary Scale Modeling) models. The pipeline involved:</p>
+                    <ul>
+                        <li>Protein sequence extraction from pangenomes</li>
+                        <li>ESM2 embedding generation</li>
+                        <li>DBSCAN and Leiden clustering analysis</li>
+                        <li>Cosine and Hausdorff similarity analyses</li>
+                    </ul>
                     
-                    <h2>useEffect Hook</h2>
-                    <p>The useEffect hook handles side effects in functional components, replacing lifecycle methods like componentDidMount and componentDidUpdate.</p>
+                    <h2>Key Findings</h2>
+                    <p>The embedding-derived features successfully highlighted host-associated patterns across human, chicken, turkey, pork, and beef isolates. This work is informing the development of combined statistical–LLM methodologies that could significantly improve source attribution accuracy.</p>
                     
-                    <h2>Best Practices</h2>
-                    <p>When using hooks, always follow the Rules of Hooks: only call them at the top level of your React function, and only call them from React functions.</p>
-                    
-                    <p>React Hooks provide a cleaner, more intuitive way to manage state and side effects in your React applications. Start with these basic hooks and gradually explore more advanced ones as your needs grow.</p>
+                    <h2>Future Directions</h2>
+                    <p>The integration of protein language models with traditional genomic approaches opens new avenues for understanding host-pathogen dynamics and could have significant implications for food safety and public health surveillance.</p>
                 `
             },
             blog2: {
-                title: "The Art of Clean Code",
-                date: "March 10, 2025",
+                title: "Bayesian Methods in Genomic Source Attribution",
+                date: "December 20, 2024",
                 content: `
-                    <h1>The Art of Clean Code</h1>
-                    <p><em>Published on March 10, 2025</em></p>
+                    <h1>Bayesian Methods in Genomic Source Attribution</h1>
+                    <p><em>Published on December 20, 2024</em></p>
                     
-                    <p>Clean code is not just about making your code work—it's about making it readable, maintainable, and elegant. In this post, we'll explore the principles and practices that separate good code from great code.</p>
+                    <p>One of my most challenging and rewarding projects has been developing a Bayesian latent class model for probabilistic host attribution of E. coli using mobile genetic elements. This work addresses a critical need in food safety and epidemiological surveillance.</p>
                     
-                    <h2>What Makes Code Clean?</h2>
-                    <p>Clean code is characterized by several key attributes:</p>
+                    <h2>The Problem</h2>
+                    <p>Determining the source of bacterial contamination in foodborne illness outbreaks is crucial for public health response. Traditional methods often struggle with the inherent uncertainty in genomic data and the complex relationships between bacterial isolates and their hosts.</p>
+                    
+                    <h2>Bayesian Latent Class Modeling</h2>
+                    <p>Our approach integrates:</p>
                     <ul>
-                        <li>Readability: Code should read like well-written prose</li>
-                        <li>Simplicity: Avoid unnecessary complexity</li>
-                        <li>Consistency: Follow established patterns and conventions</li>
-                        <li>Testability: Code should be easy to test</li>
+                        <li>Accessory genome features as primary predictors</li>
+                        <li>Sample similarity priors to account for phylogenetic relationships</li>
+                        <li>Uncertainty quantification through posterior distributions</li>
+                        <li>Tree-structured shrinkage for improved prediction accuracy</li>
                     </ul>
                     
-                    <h2>Meaningful Names</h2>
-                    <p>Choose names that reveal intent. Instead of:</p>
-                    <pre><code>const d = new Date();</code></pre>
-                    <p>Use:</p>
-                    <pre><code>const currentDate = new Date();</code></pre>
+                    <h2>Validation and Results</h2>
+                    <p>Working with over 8,000 E. coli genomes, we validated our model's ability to accurately infer zoonotic transmission routes. The Bayesian framework provides not just predictions, but confidence intervals that are crucial for public health decision-making.</p>
                     
-                    <h2>Functions Should Do One Thing</h2>
-                    <p>Functions should be small and focused on a single responsibility. This makes them easier to understand, test, and reuse.</p>
-                    
-                    <h2>Comments and Documentation</h2>
-                    <p>Good code is self-documenting, but strategic comments can clarify complex business logic or explain the "why" behind certain decisions.</p>
-                    
-                    <p>Remember: clean code is not a destination but a journey. Continuously refactor and improve your code as you learn and grow as a developer.</p>
+                    <h2>Impact</h2>
+                    <p>This work has been accepted at mBio and represents a significant advancement in our ability to trace bacterial contamination sources. The probabilistic nature of our approach provides the uncertainty quantification that public health officials need for informed decision-making.</p>
                 `
             },
             blog3: {
-                title: "Building Your First API",
-                date: "March 5, 2025",
+                title: "AI in Antimicrobial Resistance Research",
+                date: "November 30, 2024",
                 content: `
-                    <h1>Building Your First API</h1>
-                    <p><em>Published on March 5, 2025</em></p>
+                    <h1>AI in Antimicrobial Resistance Research</h1>
+                    <p><em>Published on November 30, 2024</em></p>
                     
-                    <p>APIs (Application Programming Interfaces) are the backbone of modern web applications. In this tutorial, we'll build a simple RESTful API using Node.js and Express.</p>
+                    <p>Antimicrobial resistance (AMR) represents one of the greatest threats to global health. At the Antibiotic Resistance Action Center, we're leveraging artificial intelligence and machine learning to understand, predict, and combat this growing crisis.</p>
                     
-                    <h2>What You'll Need</h2>
-                    <ul>
-                        <li>Node.js installed on your computer</li>
-                        <li>Basic knowledge of JavaScript</li>
-                        <li>A code editor (VS Code recommended)</li>
-                    </ul>
+                    <h2>The AMR Challenge</h2>
+                    <p>AMR kills over 700,000 people annually worldwide, and this number could reach 10 million by 2050 without intervention. Traditional approaches to understanding resistance mechanisms and transmission patterns are often too slow for the rapidly evolving nature of bacterial resistance.</p>
                     
-                    <h2>Setting Up the Project</h2>
-                    <p>First, create a new directory and initialize a new Node.js project:</p>
-                    <pre><code>mkdir my-first-api
-cd my-first-api
-npm init -y
-npm install express</code></pre>
+                    <h2>AI-Powered Solutions</h2>
+                    <p>Our team applies machine learning across multiple domains:</p>
                     
-                    <h2>Creating the Server</h2>
-                    <p>Create an index.js file with the following code:</p>
-                    <pre><code>const express = require('express');
-const app = express();
-const PORT = 3000;
-
-app.use(express.json());
-
-// Sample data
-let users = [
-    { id: 1, name: 'Alice', email: 'alice@example.com' },
-    { id: 2, name: 'Bob', email: 'bob@example.com' }
-];
-
-// GET all users
-app.get('/api/users', (req, res) => {
-    res.json(users);
-});
-
-// GET user by ID
-app.get('/api/users/:id', (req, res) => {
-    const user = users.find(u => u.id === parseInt(req.params.id));
-    if (!user) return res.status(404).json({ error: 'User not found' });
-    res.json(user);
-});
-
-app.listen(PORT, () => {
-    console.log(\`Server running on port \${PORT}\`);
-});</code></pre>
+                    <h2>Biomarker Discovery</h2>
+                    <p>Using elastic net regression, PCA, and network analysis, we've identified zoonotic E. coli signatures from over 8,000 genomes. These signatures help us understand how resistance spreads between animal and human populations.</p>
                     
-                    <h2>Testing Your API</h2>
-                    <p>Run your server with <code>node index.js</code> and test the endpoints using a tool like Postman or curl.</p>
+                    <h2>Diagnostic Development</h2>
+                    <p>I've developed qPCR assays for 15 probiotic species using unsupervised learning to identify unique core-genome targets. This work has resulted in patent applications and could revolutionize probiotic quality control.</p>
                     
-                    <h2>Next Steps</h2>
-                    <p>This is just the beginning! Consider adding database integration, authentication, error handling, and proper validation to create a production-ready API.</p>
+                    <h2>Real-World Impact</h2>
+                    <p>These AI-driven approaches have led to more accurate source attribution for foodborne illness outbreaks, faster identification of resistance mechanisms, and improved surveillance capabilities.</p>
                 `
             }
         };
@@ -716,29 +632,6 @@ app.listen(PORT, () => {
         document.getElementById('blogModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeBlogModal();
-            }
-        });
-
-        // Handle form submission
-        function handleSubmit(event) {
-            event.preventDefault();
-            
-            const form = event.target;
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            
-            // For now, just show an alert
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            form.reset();
-        }
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
             }
         });
     </script>
